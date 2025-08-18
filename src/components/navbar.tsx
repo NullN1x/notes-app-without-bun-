@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Features", href: "#features" },
+  { name: "Get Started", href: "#get-started" },
 ];
 
 export const Navbar = () => {

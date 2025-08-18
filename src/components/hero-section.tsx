@@ -26,6 +26,8 @@ const transitionVariants = {
   },
 };
 
+const imageUrl = "";
+
 export default function HeroSection() {
   return (
     <main className="overflow-hidden">
@@ -66,13 +68,15 @@ export default function HeroSection() {
             }}
             className="absolute inset-0 -z-20"
           >
-            <Image
-              src=""
-              alt="background"
-              className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-              width="3276"
-              height="4095"
-            />
+            {imageUrl && (
+              <Image
+                src={imageUrl}
+                alt="background"
+                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
+                width="3276"
+                height="4095"
+              />
+            )}
           </AnimatedGroup>
           <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
           <div className="mx-auto max-w-7xl px-6">
@@ -83,7 +87,7 @@ export default function HeroSection() {
                 as="h1"
                 className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]"
               >
-                Modern Solutions for Customer Engagement
+                Capture, Organize, and Remember Everything
               </TextEffect>
 
               <TextEffect
@@ -94,8 +98,9 @@ export default function HeroSection() {
                 as="p"
                 className="mx-auto mt-8 max-w-2xl text-balance text-lg"
               >
-                Highly customizable components for building modern websites and
-                applications that look and feel the way you mean it.
+                A simple, powerful, and elegant notes app for all your ideas,
+                thoughts, and daily tasks. Stay organized and boost your
+                productivity.
               </TextEffect>
 
               <AnimatedGroup
@@ -122,21 +127,10 @@ export default function HeroSection() {
                     className="rounded-xl px-5 text-base"
                   >
                     <Link href="#link">
-                      <span className="text-nowrap">Start Building</span>
+                      <span className="text-nowrap">Start Writing</span>
                     </Link>
                   </Button>
                 </div>
-                <Button
-                  key={2}
-                  asChild
-                  size="lg"
-                  variant="ghost"
-                  className="h-10.5 rounded-xl px-5"
-                >
-                  <Link href="#link">
-                    <span className="text-nowrap">Request a demo</span>
-                  </Link>
-                </Button>
               </AnimatedGroup>
             </div>
           </div>

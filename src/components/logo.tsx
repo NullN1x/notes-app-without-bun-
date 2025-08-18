@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 type LogoProps = {
@@ -15,7 +16,8 @@ export default function Logo({
 }: LogoProps) {
   return (
     <Link
-      href="/"
+      href="#"
+      onClick={() => window.location.reload()}
       aria-label={label}
       className={`flex items-center gap-2 ${className}`}
     >
