@@ -30,7 +30,7 @@ const imageUrl = "";
 
 export default function HeroSection() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden" id="hero-section">
       <div
         aria-hidden
         className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
@@ -126,7 +126,7 @@ export default function HeroSection() {
                     size="lg"
                     className="rounded-xl px-5 text-base"
                   >
-                    <Link href="#link">
+                    <Link href="/sign-up">
                       <span className="text-nowrap">Start Writing</span>
                     </Link>
                   </Button>

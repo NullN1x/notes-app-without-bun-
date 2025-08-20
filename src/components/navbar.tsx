@@ -7,7 +7,7 @@ import React from "react";
 
 const menuItems = [
   { name: "Features", href: "#features" },
-  { name: "Get Started", href: "#get-started" },
+  { name: "Get Started", href: "/sign-up" },
 ];
 
 export const Navbar = () => {
@@ -23,7 +23,7 @@ export const Navbar = () => {
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
-                href="/"
+                href="#hero-section"
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
@@ -72,20 +72,20 @@ export const Navbar = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild variant="outline" size="sm">
-                  <Link href="#">
+                  <Link href="/sign-in">
                     <span>Login</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm">
-                  <Link href="#">
+                  <Link href="sign-up">
                     <span>Sign Up</span>
                   </Link>
                 </Button>
-                <Button asChild size="sm" className="hidden">
+                {/* <Button asChild size="sm" className="hidden">
                   <Link href="#">
-                    <span>Get Started</span>
+                    <span>Get hhhhhhhhh</span>
                   </Link>
-                </Button>
+                </Button> idk wa this code is supposed to render*/}
               </div>
             </div>
           </div>

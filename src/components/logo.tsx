@@ -16,8 +16,7 @@ export default function Logo({
 }: LogoProps) {
   return (
     <Link
-      href="#"
-      onClick={() => window.location.reload()}
+      href="#hero-section"
       aria-label={label}
       className={`flex items-center gap-2 ${className}`}
     >
