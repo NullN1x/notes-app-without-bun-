@@ -1,4 +1,6 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { CreateNotebookButton } from "@/components/create-notebook-button";
+import Notebooks from "@/components/notebooks";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,6 +15,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { auth } from "@/lib/auth";
+import { getNotebooks } from "@/services/notebooks";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -25,6 +28,7 @@ export default async function Page() {
     redirect("/sign-in");
   }
 
+  const notebooks = await getNotebooks();
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -51,7 +55,11 @@ export default async function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+            {notebooks.success &&
+              notebooks?.notebooks?.map((notebook) => (
+                <Notebooks key={notebook.id} notebook={notebook} />
+              ))}
+            <CreateNotebookButton />
             <div className="bg-muted/50 aspect-video rounded-xl" />
             <div className="bg-muted/50 aspect-video rounded-xl" />
           </div>
